@@ -40,7 +40,7 @@ class Server {
     }
     midlewares() {
         // Parseamos el body
-        this.app.use(express_1.default.json());
+        this.app.use(express_1.default.json()); //
         // Cors
         this.app.use((0, cors_1.default)());
     }
@@ -49,8 +49,6 @@ class Server {
             try {
                 yield connection_1.default.authenticate();
                 console.log('Base de datos conectada');
-                // await db.authenticate();
-                // console.log('Base de datos conectada')
             }
             catch (error) {
                 console.log(error);
