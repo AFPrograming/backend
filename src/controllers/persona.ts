@@ -62,17 +62,17 @@ export const updatePerson = async (req: Request, res: Response) => {
 
         const persona = await Persona.findByPk(id);
 
-    if(persona) {
-        await persona.update(body);
-        res.json({
-            msg: 'El usuario fue actualziado con exito'
-        })
-
-    } else {
-        res.status(404).json({
-            msg: `No existe un usuario con el id ${id}`
-        })
-    }
+        if(persona) {
+            await persona.update(body);
+            res.json({
+                msg: 'El usuario fue actualziado con exito'
+            })
+    
+        } else {
+            res.status(404).json({
+                msg: `No existe un usuario con el id ${id}`
+            })
+        }
         
     } catch (error) {
         console.log(error);

@@ -49,8 +49,8 @@ class Server {
             try {
                 yield connection_1.default.authenticate();
                 console.log('Base de datos conectada');
-                yield connection_1.default.authenticate();
-                console.log('Base de datos conectada');
+                // await db.authenticate();
+                // console.log('Base de datos conectada')
             }
             catch (error) {
                 console.log(error);
