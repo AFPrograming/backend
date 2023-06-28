@@ -34,7 +34,7 @@ class Server {
     midlewares() {
 
         // Parseamos el body
-        this.app.use(express.json());
+        this.app.use(express.json()); //
 
         // Cors
         this.app.use(cors());
@@ -44,8 +44,6 @@ class Server {
 
         try {await db.authenticate();
             console.log('Base de datos conectada')
-            // await db.authenticate();
-            // console.log('Base de datos conectada')
         } catch (error) {
             console.log(error);
             console.log('Error al conectarse a la base de datos')
