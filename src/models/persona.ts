@@ -14,7 +14,6 @@ const Persona = db.define('Persona', { //define un nuevo modelo, representando u
     email: {
         type: DataTypes.STRING
     }
-
 }, 
 {
   createdAt: false,
